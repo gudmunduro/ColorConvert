@@ -31,7 +31,7 @@ fn foramt_float_rgb(color: &StandardColor) -> String {
         int_color_to_float(*blue),
     );
 
-    format!("rgb({red}, {green}, {blue})")
+    format!("rgb({red:.2}, {green:.2}, {blue:.2})")
 }
 
 fn foramt_float_rgba(color: &StandardColor) -> String {
@@ -45,7 +45,7 @@ fn foramt_float_rgba(color: &StandardColor) -> String {
         int_color_to_float(*alpha),
     );
     
-    format!("rgba({red}, {green}, {blue}, {alpha})")
+    format!("rgba({red:.2}, {green:.2}, {blue:.2}, {alpha:.2})")
 }
 
 fn format_hex_rgb(color: &StandardColor) -> String {
