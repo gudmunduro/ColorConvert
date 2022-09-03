@@ -22,10 +22,10 @@ struct Args {
 
 #[derive(Debug, Copy, Clone, PartialEq, Eq, PartialOrd, Ord, ValueEnum)]
 pub enum TargetFormats {
-    IntRgb,
-    IntRgba,
-    FloatRgb,
-    FloatRgba,
+    Intrgb,
+    Intrgba,
+    Floatrgb,
+    Floatrgba,
     Hexrgb,
     Hexrgba
 }

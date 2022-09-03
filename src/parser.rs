@@ -106,7 +106,7 @@ fn parse_int_rgb(input: &str) -> IResult<&str, StandardColor> {
                 single_tuple_int_value,
                 map(opt(single_tuple_int_value), |i| i.unwrap_or(255)),
             )),
-            tag(")"),
+            pair(char(')'), opt(char(';'))),
         ),
     )(input)?;
 
@@ -123,7 +123,7 @@ fn parse_float_rgb(input: &str) -> IResult<&str, StandardColor> {
                 single_tuple_float_value,
                 map(opt(single_tuple_float_value), |i| i.unwrap_or(1.0)),
             )),
-            tag(")"),
+            pair(char(')'), opt(char(';'))),
         ),
     )(input)?;
 

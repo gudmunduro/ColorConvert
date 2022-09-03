@@ -65,10 +65,10 @@ fn format_hex_rgba(color: &StandardColor) -> String {
 pub fn format_color(target_format: &TargetFormats, color: &StandardColor) -> String {
     use TargetFormats::*;
     match target_format {
-        IntRgb => foramt_int_rgb(color),
-        IntRgba => foramt_int_rgba(color),
-        FloatRgb => foramt_float_rgb(color),
-        FloatRgba => foramt_float_rgba(color),
+        Intrgb => foramt_int_rgb(color),
+        Intrgba => foramt_int_rgba(color),
+        Floatrgb => foramt_float_rgb(color),
+        Floatrgba => foramt_float_rgba(color),
         Hexrgb => format_hex_rgb(color),
         Hexrgba => format_hex_rgba(color)
     }
